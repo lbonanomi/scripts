@@ -1,0 +1,12 @@
+[user]
+        email = please_use_a_real_email_address
+        name = BBGH Bot
+[color]
+        ui = false
+[http]
+        sslVerify = false
+[merge]
+        tool = meld
+
+[credential]
+        helper = cache
