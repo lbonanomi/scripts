@@ -23,5 +23,9 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 [git_cat_tree](https://github.com/lbonanomi/scripts/blob/master/git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Git runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
 
 
+[ghe_bridge](https://github.com/lbonanomi/scripts/tree/master/ghe_bridge): So Employer pushes an "everyone in the pool" model for GHE, including non-engineering staff who may not be comfortable on a Linux commandline and have trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allows for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for GH Desktop. 
 
+[a link](https://github.com/user/repo/blob/branch/other_file.md)
+[a link](https://github.com/user/repo/blob/branch/other_file.md)
+[a link](https://github.com/user/repo/blob/branch/other_file.md)
 [a link](https://github.com/user/repo/blob/branch/other_file.md)
