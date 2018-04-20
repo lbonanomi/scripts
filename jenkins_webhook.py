@@ -1,4 +1,4 @@
-#!/opt/bb/bin/python
+#!/bin/python
 
 import simplejson as json
 import base64
