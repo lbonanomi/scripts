@@ -1,0 +1,1 @@
+javascript:void((function(){var a;a=document.getElementsByName("go-import");s=a[0].content;arr=s.split(" ");narr=arr[2].split("/"); finger="http://BRIDGE_URL:8286/" + narr[3] + "/" + narr[4];window.open(finger);})())
