@@ -29,7 +29,10 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 [JIRA Pulse](https://github.com/lbonanomi/scripts/tree/master/jira_pulse): Simple monitoring for a fleet of JIRA instances. Look for connectivity and confirm basic functionality and response times with REST calls. Connection timeouts and too-slow responses trigger SMS cascades throuth Twilio, all responses are clocked against Employer's grafana.
 
 
-[a link](https://github.com/user/repo/blob/branch/other_file.md)
+[suwho.sh](https://github.com/lbonanomi/scripts/blob/master/suwho.sh): Record-keeping at Employer wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
+
+
+
 [a link](https://github.com/user/repo/blob/branch/other_file.md)
 [a link](https://github.com/user/repo/blob/branch/other_file.md)
 [a link](https://github.com/user/repo/blob/branch/other_file.md)
