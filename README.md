@@ -26,7 +26,7 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 [ghe_bridge](https://github.com/lbonanomi/scripts/tree/master/ghe_bridge): So Employer pushes an "everyone in the pool" model for GHE, including non-engineering staff who may not be comfortable on a Linux commandline and have trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allows for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for GH Desktop. 
 
 
-[JIRA Pulse](https://github.com/lbonanomi/scripts/tree/master/jira_pulse): Simple monitoring for a fleet of JIRA instances. Look for connectivity and confirm basic functionality with REST calls.
+[JIRA Pulse](https://github.com/lbonanomi/scripts/tree/master/jira_pulse): Simple monitoring for a fleet of JIRA instances. Look for connectivity and confirm basic functionality and response times with REST calls. Connection timeouts and too-slow responses trigger SMS cascades throuth Twilio, all responses are clocked against Employer's grafana.
 
 
 [a link](https://github.com/user/repo/blob/branch/other_file.md)
