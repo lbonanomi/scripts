@@ -14,7 +14,7 @@ ldap.host = "addev.$EMPLOYER.com"
 ldap.port = "636"
 ldap.encryption :simple_tls
 
-ldap_username = "CN=ADMIN_USERNAME, OU=Enabled Accounts,DC=ADDEV,DC=bloomberg,DC=com"
+ldap_username = "CN=ADMIN_USERNAME, OU=Enabled Accounts,DC=ADDEV,DC=$EMPLOYER,DC=com"
 ldap_password = "LULZNOPASSWORDZ"
 
 ldap.auth ldap_username, ldap_password
