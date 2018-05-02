@@ -22,6 +22,7 @@ phonebook = dict()
 bullpen = dict()
 
 for log in os.listdir(target):
+        log = target + '/' + log
         if os.path.isfile(log):
                 (phone, b) = doublemetaphone(log)
 
