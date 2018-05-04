@@ -32,4 +32,4 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 [suwho.sh](https://github.com/lbonanomi/scripts/blob/master/suwho.sh): Record-keeping at Employer wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
 
 
-[jacquard.py](https://github.com/lbonanomi/scripts/blob/master/jacquard.py): A debt collection tool that compares the similarity of files from ARGV using jacquard indices. This proved super-handy for checking rpm -qa lists between notionally sibling hosts.
+[jaccard.py](https://github.com/lbonanomi/scripts/blob/master/jacquard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking rpm -qa lists between notionally sibling hosts.
