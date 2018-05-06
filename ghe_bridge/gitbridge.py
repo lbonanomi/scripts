@@ -38,7 +38,7 @@ def clone(org, repo):
         zipp = Popen(['zip', '-m', '-r', zipname, repo], stdout=PIPE)
         ret = zipp.communicate()
 
-        return send_from_directory('/home/bbgh_bot', zipname, as_attachment=True)
+        return send_from_directory('/home/gh_bot', zipname, as_attachment=True)
 
 if __name__ == "__main__":
         app.run(host=listen_address, port=8286)
