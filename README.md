@@ -1,7 +1,7 @@
 [add_me_to_crowd.rb](https://github.com/lbonanomi/scripts/blob/master/add_me_to_crowd.rb): "Business" users did not feature in the correct OU of employer's Active Directory and Windows Admin said we shouldn't rearrange things. This microservice queries an Active Directory instance and creates a corresponding user in an Atlassian Crowd internal user dir. Users who *do* feature in Active Directory are routed to an independent password reset function. 
 
 
-[natural.php](https://github.com/lbonanomi/scripts/blob/master/natural.php): Employer's legacy framework uses a logging scheme that rolls files over after they hit ~30MB, appending some variation of timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values and sizes for all file names and presents them in a report as virtual files.
+[natural.php](https://github.com/lbonanomi/scripts/blob/master/natural.php): Employer's legacy framework uses a logging scheme that rolls files over after they hit ~30MB, appending some variation of timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values and sizes for all file names and presents them in a report as virtual files. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
 
 ```
 $ ~/natural
