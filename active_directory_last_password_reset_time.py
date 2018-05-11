@@ -1,7 +1,7 @@
 #!/bin/python
 
 import ConfigParser
-from datetime import datetime
+from datetime import datetime, timedelta
 import ldap
 import sys
 
@@ -29,12 +29,7 @@ ldap_rez_id = conn.search(basedn, ldap.SCOPE_SUBTREE, searchFilter, searchAttrib
 
 last_reset = data['pwdLastSet'][0]
 
-#
-# Thank you, Robert de Bock:
-# http://meinit.nl/convert-active-directory-lastlogon-time-to-unix-readable-time
-#
-
-last_reset_epoch = (int(last_reset) / 10000000) - 11676009600 # 11676009600 seconds from 1601-01-01 to 1970-01-01
+last_reset_epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
 
 print last_reset_epoch
 
