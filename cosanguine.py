@@ -50,3 +50,5 @@ for a, b in itertools.combinations(sys.argv[1:], 2):
 
     if similarity > similarity_pct_threshold:
         print str(similarity) + "% similatiry between " + a + " and " + b
+     
+     
