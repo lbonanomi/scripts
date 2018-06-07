@@ -33,3 +33,6 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 
 
 [jaccard.py](https://github.com/lbonanomi/scripts/blob/master/jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between notionally sibling hosts.
+
+
+[cosanguine](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py): Cosine text-similarity of globs. Thank you to vpekar @ StackOverflow for the math.
