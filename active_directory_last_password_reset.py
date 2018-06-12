@@ -1,17 +1,17 @@
-#!/bin/python
+#!/opt/bb/bin/python
 
-import ConfigParser
-from datetime import datetime, timedelta
-import ldap
 import sys
+import ConfigParser
+from datetime import timedelta
+import ldap
 
 # Simple config
 #
 config = ConfigParser.ConfigParser()
 config.read("~/.ssh/ldap_creds.py")   # Obviously a gloss.
 
-ldap_user = config.get("configuration","cn")
-ldap_password = config.get("configuration","password")
+ldap_user = config.get("configuration", "cn")
+ldap_password = config.get("configuration", "password")
 
 ldap.set_option(ldap.OPT_REFERRALS, 0)
 
@@ -31,6 +31,6 @@ last_reset = data['pwdLastSet'][0]
 
 last_reset_epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
 
-print last_reset_epoch
+print int(last_reset_epoch)
 
 conn.unbind_s()
