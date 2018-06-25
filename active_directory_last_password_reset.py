@@ -29,8 +29,14 @@ ldap_rez_id = conn.search(basedn, ldap.SCOPE_SUBTREE, searchFilter, searchAttrib
 
 last_reset = data['pwdLastSet'][0]
 
-last_reset_epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
+# Password was never set, or is flagged for change at next-login:
+#
 
-print int(last_reset_epoch)
+if (int(last_reset) > 0):
+    last_reset_epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
+    print int(last_reset_epoch)
+
+else:
+    print "Never-set"
 
 conn.unbind_s()
