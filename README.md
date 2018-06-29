@@ -14,9 +14,6 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 ```
 
 
-[jira_attachment_move.sh](https://github.com/lbonanomi/scripts/blob/master/jira_attachment_move.sh): A 20-minute knock-up for moving JIRA attachments between datacenters
-
-
 [AGNES](https://github.com/lbonanomi/scripts/blob/master/AGNES.rb): This script is the functional part of the AGNES password-handling system, which scraped Employer's tickting system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of Employer's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
 
 
