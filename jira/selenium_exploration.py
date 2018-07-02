@@ -5,25 +5,23 @@ import sys
 
 import re
 import time
-
-from datetime import date, timedelta
-
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
 
 
 chrome_options = Options()
+chrome_options.add_argument('--no-sandbox')
+chrome_options.add_argument('--disable-dev-shm-usage')
 chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-gpu")
 chrome_options.add_argument("--no-proxy-server")
 
-chrome_options.binary_location = '/usr/bin/chromium-browser'
+chrome_options.binary_location = '/bin/google-chrome'
 
 
-driver = webdriver.Chrome(executable_path=os.path.abspath("chromedriver"),   chrome_options=chrome_options)
-
+driver = webdriver.Chrome(executable_path=os.path.abspath("/usr/local/bin/chromedriver"),   chrome_options=chrome_options)
 
 username = ""	Fill these in.
 password = ""
