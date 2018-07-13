@@ -34,4 +34,4 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 Thank you to vpekar @ StackOverflow for the math function!
 
 
-[grouper.py](https://github.com/lbonanomi/scripts/blob/master/grouper.py): Calculate cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
+[grouper.py](https://github.com/lbonanomi/scripts/blob/master/grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
