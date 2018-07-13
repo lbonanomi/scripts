@@ -43,11 +43,11 @@ largest_files = sorted(bullpen.itervalues(), reverse=True)[:10]
 
 for (phone, count) in Counter(phones).iteritems():
     if bullpen[phone] in largest_files:
-        pct = (bullpen[phone] * 100) / fssize
+        pct = (bullpen[phone] * 100.0) / fssize
 
         size = bullpen[phone] / 1048576
 
-        sys.stdout.write(str(count) + " files like " + phonebook[phone] + "\t" + str(size) + " MB ")
+        sys.stdout.write(str(count) + " files like " + phonebook[phone] + "\t" + str(round(size,2)) + " MB ")
 
         if pct > 1:
             print str(pct) + "% of disk"
