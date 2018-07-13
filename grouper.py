@@ -1,4 +1,4 @@
-#!/opt/bb/bin/python
+#!/bin/python
 
 # Thank you vpekar, wherever you might be tonight.
 #
