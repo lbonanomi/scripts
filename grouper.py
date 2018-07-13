@@ -90,8 +90,6 @@ for a, b in itertools.permutations(sys.argv[1:], 2):
 
         similarity = int(get_cosine(Counter(text1), Counter(text2)) * 100)
 
-        print str(a) + " <- " + str(similarity) + " -> " + str(b)
-
         if similarity > similarity_pct_threshold:
             bullpen[a + b] = [a, b]
 
