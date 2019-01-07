@@ -37,4 +37,4 @@ Thank you to vpekar @ StackOverflow for the math function!
 [grouper.py](https://github.com/lbonanomi/scripts/blob/master/grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
 
 
-[scripto.sh](https://github.com/lbonanomi/scripts/blob/master/scripto.sh): Function to automatically save typescripts to github.com gists.
+[scripto.sh](https://github.com/lbonanomi/scripts/blob/master/scripto.sh): Function to automatically save local typescripts as gist-files on GitHub.com.
