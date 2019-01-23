@@ -61,6 +61,6 @@ Thank you to vpekar @ StackOverflow for the math function!
      ⡄ ⡇ ⡇ ⠐ ⡇ ⡆ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
      ⡇ ⡇ ⡇ ⡀ ⡇ ⡇ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
      ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡆ ⡇ ⡇ ⡄ ⡇ 
-0            |         |    
-         06:05     06:10   
+0             |         |    
+          06:05     06:10   
 ```
