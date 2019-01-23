@@ -40,7 +40,7 @@ Thank you to vpekar @ StackOverflow for the math function!
 [scripto.sh](https://github.com/lbonanomi/scripts/blob/master/scripto.sh): Function to automatically save local typescripts as gist-files on GitHub.com.
 
 
-[braille_chart.sh](https://github.com/lbonanomi/scripts/blob/master/braille_chart.sh): I <3 the idea of [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille.
+[braille_chart.sh](https://github.com/lbonanomi/scripts/blob/master/braille_chart.sh): I <3 the idea of [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this is fun and the expense of efficiency or sanity. 
 
 ```
      ⠐ ⠐ ⠐ ⠐ ⡆ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ 
