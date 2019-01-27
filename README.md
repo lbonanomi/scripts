@@ -20,24 +20,31 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 ### GitHub Things
 
-[ghe_bridge](https://github.com/lbonanomi/scripts/tree/master/ghe_bridge): So Employer pushes an "everyone in the pool" model for GHE, including non-engineering staff who may not be comfortable on a Linux commandline and have trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allows for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for GH Desktop. 
+[ghe_bridge](ghe_bridge): So Employer pushes an "everyone in the pool" model for GHE, including non-engineering staff who may not be comfortable on a Linux commandline and have trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allows for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for GH Desktop. 
 
-[git_cat_tree](https://github.com/lbonanomi/scripts/blob/master/git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Git runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
+[git_cat_tree](git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Git runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
 
-[scripto.sh](https://github.com/lbonanomi/scripts/blob/master/scripto.sh): Function to automatically save local typescripts as gist-files on GitHub.com.
+[scripto.sh](scripto.sh): Function to automatically save local typescripts as gist-files on GitHub.com.
+
+
+### Jenkins Things
+
+[restart_thrashing_jenkins_master.sh](restart_thrashing_jenkins_master.sh): A quick localized check-and-restart for Jenkins masters.
+
+[jenkins_webhook.py](jenkins_webhook.py): Github Enterprise webhook for sanity checking for Jenkins controller VM Chef cookbooks.
 
 
 ### Linux/Unix Things
 
-[cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  
+[cosanguine.py](cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  
 
 Thank you to vpekar @ StackOverflow for the math function!
 
-[grouper.py](https://github.com/lbonanomi/scripts/blob/master/grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
+[grouper.py](grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
 
-[jaccard.py](https://github.com/lbonanomi/scripts/blob/master/jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between notionally sibling hosts.
+[jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between notionally sibling hosts.
 
-[natural.php](https://github.com/lbonanomi/scripts/blob/master/natural.php): Employer's legacy framework uses a logging scheme that rolls files over after they hit ~30MB, appending some variation of a timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values and sizes for all file names and presents them in a report as virtual files. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
+[natural.php](natural.php): Employer's legacy framework uses a logging scheme that rolls files over after they hit ~30MB, appending some variation of a timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values and sizes for all file names and presents them in a report as virtual files. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
 
 ```bash
 $ ~/natural
@@ -49,11 +56,11 @@ FILES LIKE d_service_name.txt: 1 files consuming 7.25 GB (3.29% of /logs)
 FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB (2.18% of /logs)
 ```
 
-[suwho.sh](https://github.com/lbonanomi/scripts/blob/master/suwho.sh): Record-keeping at Employer wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
+[suwho.sh](suwho.sh): Record-keeping at Employer wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
 
 ### Visualization Things
 
-[braille_chart.sh](https://github.com/lbonanomi/scripts/blob/master/braille_chart.sh): I <3 the idea of welding  [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this script is fun and the expense of efficiency and sanity. 
+[braille_chart.sh](braille_chart.sh): I <3 the idea of welding  [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this script is fun and the expense of efficiency and sanity. 
 
 
 ```diff
