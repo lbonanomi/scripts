@@ -7,6 +7,10 @@
 
 [add_me_to_crowd.rb](add_me_to_crowd.rb): "Business" users did not feature in the correct OU of employer's Active Directory and Windows Admin said we shouldn't rearrange things. This microservice queries an Active Directory instance and creates a corresponding user in an Atlassian Crowd internal user dir. Users who *do* feature in Active Directory are routed to an independent password reset function. 
 
+[jira_attachment_move.sh](jira_attachment_move.sh): A demonstration of moving attachments via REST call with cURL.
+
+[sniper.sh](sniper.sh) & [spotter.sh](spotter.sh): A pair of shell scripts for detecting a problematic Jira plugin and disabling it automatically if it acted-up. Driven by cron and powered by cURL.
+
 [violet.php](violet.php): Employer's Jira 7 deployment scheme revolved around splitting the old single instance into a fleet of federated instances, making it impossible to preserve historic sprint data. Violet.php was used to poll and recreate project's historic sprints on their new homes. *Why PHP and cURL?* Because this was initially going to be a self-service model.
 
 
