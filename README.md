@@ -4,7 +4,7 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 [AGNES](AGNES.rb): This script is the functional part of the AGNES password-handling system, which scraped Employer's tickting system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of Employer's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
 
-[active_directory_last_password_reset.py]: Get the last reset time for an Active Directory user in python.
+[active_directory_last_password_reset.py](active_directory_last_password_reset.py): Get the last reset time for an Active Directory user in epoch seconds.
 
 
 ### Atlassian (Jira/Crowd) Things
