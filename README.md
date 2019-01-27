@@ -1,11 +1,13 @@
 ### Active Directory Things
 
-[AGNES](https://github.com/lbonanomi/scripts/blob/master/AGNES.rb): This script is the functional part of the AGNES password-handling system, which scraped Employer's tickting system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of Employer's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
+[AGNES](AGNES.rb): This script is the functional part of the AGNES password-handling system, which scraped Employer's tickting system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of Employer's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
 
 
 ### Atlassian (Jira/Crowd) Things
 
-[add_me_to_crowd.rb](https://github.com/lbonanomi/scripts/blob/master/add_me_to_crowd.rb): "Business" users did not feature in the correct OU of employer's Active Directory and Windows Admin said we shouldn't rearrange things. This microservice queries an Active Directory instance and creates a corresponding user in an Atlassian Crowd internal user dir. Users who *do* feature in Active Directory are routed to an independent password reset function. 
+[add_me_to_crowd.rb](add_me_to_crowd.rb): "Business" users did not feature in the correct OU of employer's Active Directory and Windows Admin said we shouldn't rearrange things. This microservice queries an Active Directory instance and creates a corresponding user in an Atlassian Crowd internal user dir. Users who *do* feature in Active Directory are routed to an independent password reset function. 
+
+[violet.php](violet.php): Employer's Jira 7 deployment scheme revolved around splitting the old single instance into a fleet of federated instances, making it impossible to preserve historic sprint data. Violet.php was used to poll and recreate project's historic sprints on their new homes. *Why PHP and cURL?* Because this was initially going to be a self-service model.
 
 
 ### GitHub Things
