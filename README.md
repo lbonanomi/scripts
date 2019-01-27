@@ -47,6 +47,8 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 
 [suwho.sh](https://github.com/lbonanomi/scripts/blob/master/suwho.sh): Record-keeping at Employer wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
 
+### Visualization Things
+
 [braille_chart.sh](https://github.com/lbonanomi/scripts/blob/master/braille_chart.sh): I <3 the idea of [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this script is fun and the expense of efficiency and sanity. 
 
 
