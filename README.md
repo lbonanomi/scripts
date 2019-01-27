@@ -8,7 +8,7 @@
 [add_me_to_crowd.rb](https://github.com/lbonanomi/scripts/blob/master/add_me_to_crowd.rb): "Business" users did not feature in the correct OU of employer's Active Directory and Windows Admin said we shouldn't rearrange things. This microservice queries an Active Directory instance and creates a corresponding user in an Atlassian Crowd internal user dir. Users who *do* feature in Active Directory are routed to an independent password reset function. 
 
 
-### Git & GitHub Things
+### GitHub Things
 
 [ghe_bridge](https://github.com/lbonanomi/scripts/tree/master/ghe_bridge): So Employer pushes an "everyone in the pool" model for GHE, including non-engineering staff who may not be comfortable on a Linux commandline and have trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allows for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for GH Desktop. 
 
