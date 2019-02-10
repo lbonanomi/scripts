@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3
 
 """Aggregate directory file sizes for cleanup"""
 
@@ -39,17 +39,17 @@ for log in os.listdir(target):
 
         bullpen[phone] = holder
 
-largest_files = sorted(bullpen.itervalues(), reverse=True)[:10]
+largest_files = sorted(bullpen.values(), reverse=True)[:10]
 
-for (phone, count) in Counter(phones).iteritems():
+for (phone, count) in Counter(phones).items():
     if bullpen[phone] in largest_files:
-        pct = (bullpen[phone] * 100.0) / fssize
+        pct = round((bullpen[phone] * 100.0) / fssize, 2)
 
-        size = bullpen[phone] / 1048576
+        size = round(bullpen[phone] / 1048576, 2)
 
-        sys.stdout.write(str(count) + " files like " + phonebook[phone] + "\t" + str(round(size,2)) + " MB ")
+        sys.stdout.write(str(count) + " files like " + phonebook[phone] + "\t" + str(size) + " MB ")
 
         if pct > 1:
-            print str(pct) + "% of disk"
+            print(str(pct), "% of disk")
         else:
-			print
+            print()
