@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/opt/bb/bin/python3.6
 
 """Aggregate directory file sizes for cleanup"""
 
@@ -8,10 +8,11 @@ import os
 from os.path import getsize
 from metaphone import doublemetaphone
 
+
 try:
     if os.path.isdir(sys.argv[1]):
         target = sys.argv[1]
-except Exception:
+except IndexError:
     target = '.'
 
 ##
