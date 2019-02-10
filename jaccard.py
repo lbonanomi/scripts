@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3.6
 
 """Jaccard index of files listed in ARGV"""
 
@@ -20,11 +20,11 @@ for file_a, file_b in itertools.combinations(sys.argv[1:], 2):
 
         intersection = []
 
-        for X in value_set.iteritems():
+        for X in value_set.items():
             if X[1] == 2:
                 intersection.append(X[0])
 
         cof = (len(intersection) / float(union))
         cof = str(round(cof, 3))
 
-        print file_a, file_b, cof
+        print(file_a, file_b, cof)

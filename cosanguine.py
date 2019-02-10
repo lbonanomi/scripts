@@ -1,4 +1,4 @@
-#!/bin/python
+#!/bin/python3.6
 
 """Calculate unweighted cosine-similarity of files from ARGV"""
 
@@ -24,16 +24,17 @@ def get_cosine(vec1, vec2):
     denominator = math.sqrt(sum1) * math.sqrt(sum2)
 
     if not denominator:
-        return 0.0
+        returnval = 0.0
     else:
-        return float(numerator) / denominator
+        returnval = float(numerator) / denominator
 
+    return returnval
 
 for a, b in itertools.combinations(sys.argv[1:], 2):
     try:
         os.path.isfile(a) and os.path.isfile(b)
     except Exception:
-        print  sys.argv[0] + " file_1 file_2"
+        print(sys.argv[0] + " file_1 file_2")
         sys.exit(1)
 
     text1 = []
@@ -51,4 +52,4 @@ for a, b in itertools.combinations(sys.argv[1:], 2):
     similarity = int(get_cosine(Counter(text1), Counter(text2)) * 100)
 
     if similarity > similarity_pct_threshold:
-        print str(similarity) + "% similatiry between " + a + " and " + b
+        print(str(similarity) + "% similatiry between " + a + " and " + b)

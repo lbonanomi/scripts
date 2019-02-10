@@ -1,42 +1,37 @@
-#!/bin/python
+#!/bin/python3.6
 
-import sys
-import ConfigParser
+"""Get last Active Directory password reset time"""
+
+# ldap.conf as-below:
+#
+# [LDAP]
+# cn = CN=admin,OU=Enabled Accounts,DC=Active_Directory,DC=Company,DC=com
+# password = password
+# basedb = DC=Active_Directory,DC=Company,DC=com
+
+import configparser
 from datetime import timedelta
-import ldap
+from ldap3 import Server, Connection, ALL
 
 # Simple config
 #
-config = ConfigParser.ConfigParser()
-config.read("~/.ssh/ldap_creds.py")   # Obviously a gloss.
+config = configparser.ConfigParser()
+config.read("ldap.conf")
 
-ldap_user = config.get("configuration", "cn")
-ldap_password = config.get("configuration", "password")
+ldap_user = config.get("LDAP", "cn")
+ldap_password = config.get("LDAP", "password")
 
-ldap.set_option(ldap.OPT_REFERRALS, 0)
+server = Server('addev.bloomberg.com', get_info=ALL)
+conn = Connection(server, ldap_user, ldap_password, auto_bind=True)
 
-basedn = "DC=activedirectory,DC=company,DC=com"
-searchFilter = "sAMAccountName=" + sys.argv[1]
-searchAttribute = ["pwdLastSet"]
+conn.search(ldap_user, '(objectClass=*)', attributes=['pwdLastSet'])
 
-conn = ldap.initialize('ldap://activedirectory.company.com:389')
-conn.simple_bind_s(ldap_user, ldap_password)
+response = conn.response
 
-ldap_rez_id = conn.search(basedn, ldap.SCOPE_SUBTREE, searchFilter, searchAttribute)
+last_reset = response[0]['raw_attributes']['pwdLastSet'][0].decode("utf-8")
 
-(lbl, data) = conn.result(ldap_rez_id, 0)
-(lbl, data) = data[0]
-
-last_reset = data['pwdLastSet'][0]
-
-# Password was never set, or is flagged for change at next-login:
-#
-
-if (int(last_reset) > 0):
-    last_reset_epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
-    print int(last_reset_epoch)
-
+if int(last_reset) > 0:
+    epoch = (int(last_reset) / 10000000) - timedelta(days=(1970 - 1601) * 365 + 89).total_seconds()
+    print(int(epoch))
 else:
-    print "Never-set"
-
-conn.unbind_s()
+    print("Never-set")
