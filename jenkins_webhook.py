@@ -2,7 +2,7 @@
 
 # pylint: disable=C0103
 
-"""Simple sanity-checks for Chef-driven Jenkins configs"""
+"""Simple sanity checks for Chef-driven Jenkins configs"""
 
 import base64
 from collections import Counter
