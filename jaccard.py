@@ -1,5 +1,7 @@
 #!/bin/python3.6
 
+# pylint: disable=C0103
+
 """Jaccard index of files listed in ARGV"""
 
 from collections import Counter

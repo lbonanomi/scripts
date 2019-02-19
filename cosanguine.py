@@ -1,5 +1,7 @@
 #!/bin/python3.6
 
+# pylint: disable=C0103
+
 """Calculate unweighted cosine-similarity of files from ARGV"""
 
 # --> Thank you vpekar from https://stackoverflow.com/questions/15173225 <--

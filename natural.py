@@ -1,4 +1,6 @@
-#!/opt/bb/bin/python3.6
+#!/usr/bin/python3.6
+
+# pylint: disable=C0103
 
 """Aggregate directory file sizes for cleanup"""
 
@@ -34,9 +36,10 @@ for log in os.listdir(target):
         phones.append(phone)
 
         if phone in bullpen.keys():
-            holder = bullpen[phone] + os.path.getsize(log)
+            #holder = bullpen[phone] + os.path.getsize(log)
+            holder = bullpen[phone] + getsize(log)
         else:
-            holder = os.path.getsize(log)
+            holder = getsize(log)
 
         bullpen[phone] = holder
 
