@@ -1,5 +1,7 @@
 #!/bin/python3.6
 
+# pylint: disable=C0103
+
 """Get last Active Directory password reset time"""
 
 # ldap.conf as-below:

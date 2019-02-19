@@ -1,5 +1,7 @@
 #!/bin/python3.6
 
+# pylint: disable=C0103
+
 """print "Groupings" of files based on cosire similarity"""
 
 # Thank you vpekar, wherever you might be tonight.
