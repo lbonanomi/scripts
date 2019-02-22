@@ -2,7 +2,7 @@
 
 # pylint: disable=C0103
 
-"""print "Groupings" of files based on cosire similarity"""
+"""print "Groupings" of files based on cosine similarity"""
 
 # Thank you vpekar, wherever you might be tonight.
 #
