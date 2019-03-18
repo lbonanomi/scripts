@@ -43,13 +43,13 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 ### Linux/Unix Things
 
-[cosanguine.py](cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  
+[cosanguine.py](cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  Also available in [Go](https://github.com/lbonanomi/go/blob/master/consanguine.go)  
 
 Thank you to vpekar @ StackOverflow for the math function!
 
 [grouper.py](grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line.
 
-[jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between legacy peer hosts.
+[jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between legacy peer hosts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/jaccard.go)  
 
 [natural.php](natural.php): $EMPLOYER's legacy app framework uses a logging scheme that rolls logfiles over after they hit ~30MB, appending some variation of a timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values for all file names and tabulates corresponding sizes. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
 
@@ -63,7 +63,7 @@ FILES LIKE d_service_name.txt: 1 files consuming 7.25 GB (3.29% of /logs)
 FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB (2.18% of /logs)
 ```
 
-[suwho.sh](suwho.sh): Record-keeping at $EMPLOYER wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts.  
+[suwho.sh](suwho.sh): Record-keeping at $EMPLOYER wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/suwho.go)  
 
 
 ### Visualization Things
