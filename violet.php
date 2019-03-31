@@ -65,8 +65,6 @@ function getDestBoardID($board_name)
 }
 
 
-
-
 function translate($source_instance, $dest_instance, $skey) // 'translate' issue keys between source and destination
 {
     global $source_user;
@@ -114,8 +112,6 @@ function translate($source_instance, $dest_instance, $skey) // 'translate' issue
         
         // If the issue cannot be found, try searching for similar issues based on levenshtein distance between summaries
         
-        //print "TANKED IN-FUNCTION.\n";
-        
         $keyArr = explode('-', $skey);
         
         $full_dump = `curl -s -k -u $dest_user:$dest_password  "$dest_instance/rest/api/2/search?jql=project%20=%20$keyArr[0]&maxResults=1000" 2>&1`;
@@ -148,7 +144,6 @@ function translate($source_instance, $dest_instance, $skey) // 'translate' issue
 }
 
 
-
 $dest_board_id = getDestBoardID($board_name);
 print "Sprints to board ID $dest_board_id\n";
 
@@ -160,23 +155,15 @@ $project_name    = $project_decoded['name'];
 $sprint_list = `curl -s -k -u $source_user:$source_password "$source_instance/rest/greenhopper/1.0/sprintquery/$rapidViewID?includeFutureSprints=true&includeHistoricSprints=true"`;
 $decoded     = json_decode($sprint_list, true);
 
-print "EYE: curl -s -k -u $source_user:$source_password \"$source_instance/rest/greenhopper/1.0/sprintquery/$rapidViewID?includeFutureSprints=true&includeHistoricSprints=true\"\n\n";
-
 $sprint_list = $decoded['sprints'];
 
-foreach ($sprint_list as $sprint) {
-    //print_r($sprint);
-    
+foreach ($sprint_list as $sprint) {    
     $sprintID    = $sprint['id'];
     $sprintName  = $sprint['name'];
     $sprintState = $sprint['state'];
     
     $newSprint = 'yes';
-    
-    //Ping for sprint!
-    
-    //curl -s -k -u testadmn:975zpb336 http://100.127.5.190:8080/rest/greenhopper/1.0/sprintquery/13?includeFutureSprints=true
-    
+        
     $sprint_ping = `curl -s -k -u $dest_user:$dest_password "$dest_instance/rest/greenhopper/1.0/sprintquery/$dest_board_id?includeFutureSprints=true"`;
     $ping_deco   = json_decode($sprint_ping, true);
     
@@ -197,26 +184,15 @@ foreach ($sprint_list as $sprint) {
         
         $instance_sprint = `curl -s -k -u $dest_user:$dest_password -X POST "$dest_instance/rest/greenhopper/1.0/sprint/$dest_board_id"`;
         $instance_json   = json_decode($instance_sprint, true);
-        
-        print "INSTANT from curl -s -k -u $dest_user:$dest_password -X POST \"$dest_instance/rest/greenhopper/1.0/sprint/$dest_board_id\"\n";
-        print_r($instance_json);
-        
+             
         $dest_sprint = $instance_json['id'];
     }
     
     
-    // Name this sprint. LATER, NAME AND *DATE*
-    //$name_sprint = `curl -s -k -u $dest_user:$dest_password -H 'Content-Type: application/json' -X PUT -d '{"name":"$sprintName" }' "$dest_instance/rest/greenhopper/1.0/sprint/$dest_sprint"`;
-    
-    
     // Get all issues in source sprint
-    
-    print "LIST AS curl -s -k -u $source_user:$source_password \"$source_instance/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId=$rapidViewID&sprintId=$sprintID\"\n\n";
     
     $source_issue_list = `curl -s -k -u $source_user:$source_password "$source_instance/rest/greenhopper/1.0/rapid/charts/sprintreport?rapidViewId=$rapidViewID&sprintId=$sprintID"`;
     $source_issue_json = json_decode($source_issue_list, true);
-    
-    //print_r($source_issue_json);
     
     if ($newSprint === 'yes') {
         // Date this sprint
@@ -228,7 +204,7 @@ foreach ($sprint_list as $sprint) {
         
         //print "DATE WITH curl -s -k -u $dest_user:$dest_password -H 'Content-Type: application/json' -X PUT -d '{\"name\":\"$sprintName\", \"startDate\": \"$sprintStart\", \"endDate\": \"$sprintEnd\" }' \"$dest_instance/rest/greenhopper/1.0/sprint/$dest_sprint\"\n";
         $name_sprint = `curl -s -k -u $dest_user:$dest_password -H 'Content-Type: application/json' -X PUT -d '{"name":"$sprintName", "startDate": "$sprintStart", "endDate": "$sprintEnd" }' "$dest_instance/rest/greenhopper/1.0/sprint/$dest_sprint"`;
-    } //                                                                            endOf pinged.
+    }
     
     
     //incompletedIssues
@@ -264,7 +240,6 @@ foreach ($sprint_list as $sprint) {
                 $new_key = translate($source_instance, $dest_instance, $key);
                                 
                 $shover = `curl -s -k -u $dest_user:$dest_password -H 'Content-Type: application/json' -X PUT  -d '{"idOrKeys":["$new_key"],"customFieldId":10100,"sprintId":$dest_sprint,"addToBacklog":false}'  "$dest_instance/rest/greenhopper/1.0/sprint/rank"`;
-                print "SHOVER: $shover\n\n";
                 
                 if (preg_match("/errorMessage/", $shover)) {
                     print "curl -s -k -u $dest_user:$dest_password -H 'Content-Type: application/json' -X PUT  -d '{\"idOrKeys\":[\"$new_key\"],\"customFieldId\":10100,\"sprintId\":$dest_sprint,\"addToBacklog\":false}'  \"$dest_instance/rest/greenhopper/1.0/sprint/rank\"\n";
