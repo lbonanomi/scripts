@@ -70,26 +70,4 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 
 [braille_chart.sh](braille_chart.sh): I <3 the idea of welding  [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this script is fun and the expense of efficiency and sanity. 
 
-
-```diff
-     ⠐ ⠐ ⠐ ⠐ ⡆ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ 
-60   ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-40   ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⡆ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⠐ ⠐ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⡀ ⡄ ⠐ ⠐ 
-     ⠐ ⠐ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⠐ 
-     ⠐ ⡀ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
-20   ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
-     ⠐ ⡇ ⠐ ⠐ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
-     ⡄ ⡇ ⡇ ⠐ ⡇ ⡆ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
-     ⡇ ⡇ ⡇ ⡀ ⡇ ⡇ ⡇ ⡇ ⠐ ⡇ ⡇ ⠐ ⡇ 
-     ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡇ ⡆ ⡇ ⡇ ⡄ ⡇ 
-0             |         |    
-          06:05     06:10   
-```
+![screencap](screenshots/braille_chart.png)
