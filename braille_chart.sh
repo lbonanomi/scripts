@@ -2,6 +2,7 @@
 
 # Assume a streaming STDIN, and write data to buffer
 TMPF=$(mktemp)
+
 while read time value
 do
         echo "$time $value" >> $TMPF
@@ -61,6 +62,11 @@ done
 # Labels
 
 
+echo "$@" | fgrep -q '0' || printf "     "
+
+# Draw a '|' for labels on next-row
+#
+
 nl $TMPF | awk '{ print $1 }'  | while read LN
 do
 	[[ $(($LN%5)) -eq 0 ]] && printf "%5s" "|";
@@ -76,6 +82,6 @@ do
 	[[ $(($LN%5)) -eq 0 ]] && printf "%5s" "$LB";
 done
 
-rm $TMPF
+#rm $TMPF
 
 printf "\n\n"
