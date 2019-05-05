@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Found out that this script doesn't work on my shell provider.
+printf "\u2847" | grep -q '\u' && echo "Unicode Braille not spoken here, update coreutils." && exit 2
+
 # Assume a streaming STDIN, and write data to buffer
 TMPF=$(mktemp)
 
@@ -61,8 +64,7 @@ done
 
 # Labels
 
-
-echo "$@" | fgrep -q '0' || printf "     "
+echo "$@" | fgrep -q '0' || printf "%5s"
 
 # Draw a '|' for labels on next-row
 #
@@ -82,6 +84,6 @@ do
 	[[ $(($LN%5)) -eq 0 ]] && printf "%5s" "$LB";
 done
 
-#rm $TMPF
+rm $TMPF
 
 printf "\n\n"
