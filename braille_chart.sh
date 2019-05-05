@@ -1,7 +1,11 @@
 #!/bin/bash
 
+# Found out that this script doesn't work on my shell provider.
+printf "\u2847" | grep -q '\u' && echo "Unicode Braille not spoken here, update coreutils." && exit 2
+
 # Assume a streaming STDIN, and write data to buffer
 TMPF=$(mktemp)
+
 while read time value
 do
         echo "$time $value" >> $TMPF
@@ -60,6 +64,10 @@ done
 
 # Labels
 
+echo "$@" | fgrep -q '0' || printf "%5s"
+
+# Draw a '|' for labels on next-row
+#
 
 nl $TMPF | awk '{ print $1 }'  | while read LN
 do
