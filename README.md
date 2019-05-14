@@ -27,7 +27,7 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 ### GitHub Things
 
-[ghe_bridge](ghe_bridge): $EMPLOYER pusheed an "everyone in the pool" model for Github Enterprise, including non-engineering staff who may not be comfortable on a Linux commandline and historivcally had trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allowed for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for their Github Desktop. 
+[ghe_bridge](ghe_bridge): $EMPLOYER pusheed an "everyone in the pool" model for Github Enterprise, including non-engineering staff who may not be comfortable on a Linux commandline and historically had trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allowed for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for their Github Desktop. 
 
 [git_cat_tree](git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Git runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
 
