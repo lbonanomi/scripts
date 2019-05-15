@@ -63,7 +63,7 @@ FILES LIKE d_service_name.txt: 1 files consuming 7.25 GB (3.29% of /logs)
 FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB (2.18% of /logs)
 ```
 
-[suwho.sh](suwho.sh): Record-keeping at $EMPLOYER wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/suwho.go). This functionality is discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).  
+[suwho.sh](suwho.sh): Record-keeping at $EMPLOYER wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/suwho.go). The mechanics of determining sudo-ed users is also discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).  
 
 
 ### Visualization Things
