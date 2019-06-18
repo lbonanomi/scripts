@@ -18,6 +18,8 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 [add_me_to_crowd.rb](add_me_to_crowd.rb): "Business" users did not feature in the correct Active Directory OU to appear in $EMPLOYER's Jira instances, and the Windows admins said we shouldn't rearrange things. This microservice queries Active Directory and creates corresponding users in an Atlassian Crowd internal user dir if the user is in the "wrong" OU. Users who *do* feature in the "right" Active Directory are reminded of their username and routed to an independent password reset function. 
 
+[jira_apdex_graphite.py](jira_apdex_graphite.py): Jira started silently collecting [APDEX](https://en.wikipedia.org/wiki/Apdex) metrics as-of 7.12. This script boils metrics for Grafana.
+
 [jira_attachment_move.sh](jira_attachment_move.sh): A demonstration of moving attachments via REST call with cURL.
 
 [sniper.sh](sniper.sh) & [spotter.sh](spotter.sh): A pair of shell scripts for detecting a problematic Jira plugin and disabling it automatically if it acted-up. Driven by cron, powered by cURL, and a good demonstration of working with the plugin API.
