@@ -31,7 +31,7 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 [git_cat_tree](git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Git runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
 
-[scripto.sh](scripto.sh): BASH function to automatically save local typescripts as gist-files on GitHub.com. This functionality is discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).
+[scripto.sh](scripto.sh): BASH function to automatically save local typescripts as gist-files on GitHub.com. You may want to consider [sterilizing](https://github.com/lbonanomi/go/blob/master/revisionist.go) files before posting. This functionality is discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).
 
 
 ### Jenkins Things
