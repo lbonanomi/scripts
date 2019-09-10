@@ -96,8 +96,6 @@ for a, b in itertools.permutations(sys.argv[1:], 2):
 
         similarity = int(get_cosine(Counter(text1), Counter(text2)) * 100)
 
-        print(a, b, similarity)
-
         if similarity > threshold:
             bullpen[a + b] = [a, b]
 
@@ -121,7 +119,7 @@ for thing in bullpen.values():
                     pack.append(tupled[1])
     passflag = 1
 
-    for stored in fish.values():
+    for stored in list(fish.values()):
         # Already packed in a larger set
         if set(pack).issubset(set(stored)) and len(pack) < len(stored):
             passflag = 0
