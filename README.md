@@ -51,7 +51,7 @@ Thank you to vpekar @ StackOverflow for the math function!
 
 [jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between legacy peer hosts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/jaccard.go)  
 
-[jqless.sh](jqless.sh): It annoys me all out of proportion to have a REST endpoint that returns unformatted JSON to a cURL call, so I alias this as `less`. Discueed briefly in a [dev.to](https://dev.to/lbonanomi/tweaking-less-1-for-json-parsing-10km) arrticle.
+[jqless.sh](jqless.sh): It annoys me all out of proportion to have a REST endpoint that returns unformatted JSON to a cURL call, so I alias this as `less`. Discussed briefly in a [dev.to](https://dev.to/lbonanomi/tweaking-less-1-for-json-parsing-10km) arrticle.
 
 [natural.php](natural.php): $EMPLOYER's legacy app framework uses a logging scheme that rolls logfiles over after they hit ~30MB, appending some variation of a timestamp to the old filename. This can lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values for all file names and tabulates corresponding sizes. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
 
