@@ -59,7 +59,7 @@ Also available in [Go](https://github.com/lbonanomi/go/blob/master/grouper.go)
 
 Also available in [Go](https://github.com/lbonanomi/go/blob/master/jaccard.go)  
 
-[jqless.sh](jqless.sh): It annoys me all out of proportion to have a REST endpoint that returns unformatted JSON to a cURL call, so I alias this as `less`. 
+[jqless.sh](jqless.sh): It annoys me all out of proportion when REST endpoints return unformatted JSON, so I alias this to `less`. 
 
 Discussed briefly in a [dev.to](https://dev.to/lbonanomi/tweaking-less-1-for-json-parsing-10km) arrticle.
 
