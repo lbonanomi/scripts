@@ -47,7 +47,7 @@ This functionality is discussed as part of a [dev.to article](https://dev.to/lbo
 
 [cosanguine.py](cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  
 
-Also available in [Go](https://github.com/lbonanomi/go/blob/master/consanguine.go)  
+<small>Also available in [Go](https://github.com/lbonanomi/go/blob/master/consanguine.go)</small>  
 
 ***Thank you to vpekar @ StackOverflow for the math function!***
 
