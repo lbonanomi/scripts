@@ -49,7 +49,7 @@ Thank you to vpekar @ StackOverflow for the math function!
 
 [grouper.py](grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line. Also available in [Go](https://github.com/lbonanomi/go/blob/master/grouper.go)  
 
-[hello_worm.sh](hello_worm.sh): From dev.to
+[hello_worm.sh](hello_worm.sh): Just for fun, map SSH probes recorded in `btmp` on a world map. Discussed at-length in a [dev.to article](https://dev.to/lbonanomi/hello-worm-mapping-ssh-probes-with-a-bash-script-3if7)
 
 [jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between legacy peer hosts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/jaccard.go)  
 
