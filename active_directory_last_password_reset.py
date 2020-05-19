@@ -23,7 +23,7 @@ config.read("ldap.conf")
 ldap_user = config.get("LDAP", "cn")
 ldap_password = config.get("LDAP", "password")
 
-server = Server('addev.bloomberg.com', get_info=ALL)
+server = Server('$LDAP_SERVER', get_info=ALL)
 conn = Connection(server, ldap_user, ldap_password, auto_bind=True)
 
 conn.search(ldap_user, '(objectClass=*)', attributes=['pwdLastSet'])
