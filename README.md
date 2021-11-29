@@ -5,11 +5,11 @@
 
 ## What's This?
 
-Anything too-small to warrant its own repo, and too-large to fit into trimstray's [one-liner collection](https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md)
+Anything too-small to warrant its own repo, and too-large to fit into trimstray's [one-liner collection](https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md#one-liners-toc)
 
 ### Active Directory Things
 
-[AGNES](AGNES.rb): This script is the functional part of the AGNES password-handling system, which scraped $EMPLOYER's ticketing system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of $EMPLOYER's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
+[AGNES](AGNES.rb): This script was the functional part of the AGNES password-handling system, which scraped $EMPLOYER's ticketing system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of $EMPLOYER's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
 
 [active_directory_last_password_reset.py](active_directory_last_password_reset.py): Get the last reset time for an Active Directory user in epoch seconds.
 
@@ -20,7 +20,7 @@ Anything too-small to warrant its own repo, and too-large to fit into trimstray'
 
 [jira_attachment_move.sh](jira_attachment_move.sh): A demonstration of moving attachments via REST call with cURL.
 
-[sniper.sh](sniper.sh) & [spotter.sh](spotter.sh): A pair of shell scripts for detecting a problematic Jira plugin and disabling it automatically if it acted-up. Driven by cron, powered by cURL, and a good demonstration of working with the plugin API.
+[sniper.sh](sniper.sh) & [spotter.sh](spotter.sh): A pair of shell scripts for detecting a problematic Jira plugin and disabling it automatically if it acted-up. Driven by cron, powered by cURL, and (I think) a good demonstration of working with the plugin API.
 
 [violet.php](violet.php): $EMPLOYER's Jira 7 deployment scheme revolved around splitting the single legacy instance into a fleet of federated instances, making it impossible to preserve historic sprint data. Violet.php was used to poll and recreate project's historic sprints on their new homes. *Why PHP and cURL?* Because this was initially going to be a self-service model.
 
@@ -75,4 +75,4 @@ FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB
 ![screencap](screenshots/braille_chart.png)
 
 #### NOTE: 
-If you need a *good* example of visualization in-shell, [katef](https://github.com/katef/) schooled Twitter with [this](https://gist.github.com/katef/fb4cb6d47decd8052bd0e8d88c03a102)
+If you need a *good* example of visualization in-shell, my hero [katef](https://github.com/katef/) schooled Twitter with [this](https://gist.github.com/katef/fb4cb6d47decd8052bd0e8d88c03a102)
