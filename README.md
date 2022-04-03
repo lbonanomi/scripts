@@ -1,11 +1,8 @@
-# Scripts
-
-> You guys have to learn this technology. You have to learn how to hack it, or it's going to rule your lives.  
-> -John McGowan  
+<p align="center"><img src="media/Tools-R-Us.png" alt="Tools R Us" /></p>
 
 ## What's This?
 
-Anything too-small to warrant its own repo, and too-large to fit into trimstray's [one-liner collection](https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md#one-liners-toc)
+Anything too-small to warrant its own repo, and too-large to fit into trimstray's [one-liner collection](https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md#one-liners-toc)  
 
 ### Active Directory Things
 
