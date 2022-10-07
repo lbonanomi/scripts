@@ -1,77 +1,43 @@
-<p align="center"><img src="media/Tools-R-Us.png" alt="Tools R Us" /></p>
+<h3 align="center">Tᴏᴏʟs ᴙ Uꜱ</h3>
 
-## What's This?
+## Active Directory Tools
 
-Anything too-small to warrant its own repo, and too-large to fit into trimstray's [one-liner collection](https://github.com/trimstray/the-book-of-secret-knowledge/blob/master/README.md#one-liners-toc)  
-
-### Active Directory Things
-
-[AGNES](AGNES.rb): This script was the functional part of the AGNES password-handling system, which scraped $EMPLOYER's ticketing system looking for password reset requests from folks who didn't bring their biometric token to work. If they hadn't set an Active Directory password in the last 89 days AGNES would generate a weakly-random password for them. This script worked in-concert with scripts useless outside of $EMPLOYER's devlab which would handle both ticket scraping and email. The name is a callback to the original mailer sign-off "From Agnes, with love"
-
-[active_directory_last_password_reset.py](active_directory_last_password_reset.py): Get the last reset time for an Active Directory user in epoch seconds.
+* [Reset AD password as Sinatra webservice](https://gist.github.com/lbonanomi/d61a9265d2e9e970054efbb84230f73d)
+* [Get last Active Directory password reset](https://gist.github.com/lbonanomi/38870bf802e8055b6e89dbd6782dc6af)  
 
 
-### Atlassian (Jira/Crowd) Things
-
-[add_me_to_crowd.rb](add_me_to_crowd.rb): "Business" users did not feature in the correct Active Directory OU to appear in An old $EMPLOYER's Jira instances, and the Windows admins said we shouldn't rearrange things. This microservice queries Active Directory and creates corresponding users in an Atlassian Crowd internal user dir if the user is in the "wrong" OU. Users who *do* feature in the "right" Active Directory are reminded of their username and routed to an independent password reset function. 
-
-[jira_attachment_move.sh](jira_attachment_move.sh): A demonstration of moving attachments via REST call with cURL.
-
-[sniper.sh](sniper.sh) & [spotter.sh](spotter.sh): A pair of shell scripts for detecting a problematic Jira plugin and disabling it automatically if it acted-up. Driven by cron, powered by cURL, and (I think) a good demonstration of working with the plugin API.
-
-[violet.php](violet.php): An old $EMPLOYER's Jira 7 deployment scheme revolved around splitting the single legacy instance into a fleet of federated instances, making it impossible to preserve historic sprint data. Violet.php was used to poll and recreate project's historic sprints on their new homes. *Why PHP and cURL?* Because this was initially going to be a self-service model.
+## .bashrc Functions
+* [Block piping curl output into bash](https://gist.github.com/lbonanomi/5a987b5f0987f3b1863245d54ae00848)  &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/lecturing-about-curl-bash-pipelines-1ip1)
+* [Record terminal session as a Gist](https://gist.github.com/lbonanomi/32e08b636c4cb797e6926a305b083a0e) &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga)
+* [Was SSH user authorized by key or password?](https://gist.github.com/lbonanomi/4bcfd763b0e30de520423e626cb6aac8)  &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/ssh-shibboleths-3p5b)
+* [What was I doing in this BASH session?](https://gist.github.com/lbonanomi/ab13df664ef2054a2e34eeb933d6675d)  &#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/what-was-i-doing-in-this-shell-4i9b)
+* [Who su-ed into this shell?](https://gist.github.com/lbonanomi/36a8bec8245b4eda61b7f332746d1059)  
 
 
-### GitHub Things
-
-[ghe_bridge](ghe_bridge): An old $EMPLOYER pushed an "everyone in the pool" model for Github Enterprise, including non-engineering staff who may not be comfortable on a Linux commandline and historically had trouble with navigating a .gitconfig file. This microservice and bookmarklet combo allowed for more business-oriented folks to push a button and get a fixed .gitconfig and a repository zipfile for their Github Desktop. 
-
-[git_cat_tree](git_cat_tree.rb): Documentation in Github Enterprise is a great idea! Storing Github runbooks just-in GHE is a *terrible idea*. This is a convenience script for picking docco off of a GHE instance. Why not use a git clone? Because babeld can fail independently.
-
-[scripto.sh](scripto.sh): BASH function to automatically save local typescripts as gist-files on GitHub.com. You may want to consider [sterilizing](https://github.com/lbonanomi/go/blob/master/revisionist.go) files before posting. This functionality is discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).
+## Confluence Tools
+* [Slack shortcut: search message text in Confluence](https://gist.github.com/lbonanomi/a7a6dcff5b0e7f4a65c1658bac81f52f#file-wikit-py)
 
 
-### Jenkins Things
+## Jira Tools 
+* [Disable a specific Jira plugin](https://gist.github.com/lbonanomi/23f1ab7784f960d86dc24ff445e5929c)  
+* [Publish project's *Due Date* values as an iCal feed](https://gist.github.com/lbonanomi/635ee4fe89e01e96865132d5844433cd)
+* [Various Splunk queries for Jira admins](https://gist.github.com/lbonanomi/d636dcb815ced29ed83b18b5d85dfc53)  
 
-[restart_thrashing_jenkins_master.sh](restart_thrashing_jenkins_master.sh): A quick localized check-and-restart for Jenkins masters.
-
-[jenkins_webhook.py](jenkins_webhook.py): Github Enterprise webhook for sanity checking for Jenkins controller VM Chef cookbooks.
-
-
-### Linux/Unix Things
-
-[cosanguine.py](cosanguine.py): Calculate cosine text-similarity of files listed in ARGV, mixes well with a little shell glue and [polarizer](https://github.com/lbonanomi/polarizer).  Also available in [Go](https://github.com/lbonanomi/go/blob/master/consanguine.go)  
-
-Thank you to vpekar @ StackOverflow for the math function!
-
-[grouper.py](grouper.py): Calculate (potentially weighted) cosine text-similarity of files listed in ARGV like [cosanguine.py](https://github.com/lbonanomi/scripts/blob/master/cosanguine.py), but group files together on STDOUT line. Also available in [Go](https://github.com/lbonanomi/go/blob/master/grouper.go)  
-
-[hello_worm.sh](hello_worm.sh): Just for fun, stick pins corresponding to SSH probes recorded in `btmp` on a world map. Discussed at-length in a [dev.to article](https://dev.to/lbonanomi/hello-worm-mapping-ssh-probes-with-a-bash-script-3if7)
-
-[jaccard.py](jaccard.py): A debt collection tool that compares the similarity of files from ARGV using jaccard indices. This proved super-handy for checking ```rpm -qa``` lists between legacy peer hosts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/jaccard.go)  
-
-[natural.php](natural.php): An old $EMPLOYER's legacy app framework used a logging scheme that rolls logfiles over after they hit ~30MB, appending some variation of a timestamp to the old filename. This lead to very-full directories without any single file being over-large, preventing chats about log management with any particular development group. This script trolls a directory building a database of metaphone3 values for all file names and tabulates corresponding sizes. A less featureful (but less snarled) [python](https://github.com/lbonanomi/scripts/blob/master/natural.py) port is available, too.
-
-```bash
-$ ~/natural
-
-FILES LIKE a_service_name_2018-04-14T00:00:21.log: 6 files consuming 10.45 GB (4.74% of /logs)
-FILES LIKE b_service_name.log.20180418_130954: 274 files consuming 8.34 GB (3.78% of /logs)
-FILES LIKE c_service_name.20171016: 189 files consuming 7.86 GB (3.57% of /logs)
-FILES LIKE d_service_name.txt: 1 files consuming 7.25 GB (3.29% of /logs)
-FILES LIKE e_service_name.log.20180214_074502-191631: 90 files consuming 4.79 GB (2.18% of /logs)
-```
-
-[suwho.sh](suwho.sh): Record-keeping at $EMPLOYER wasn't always what it is now and security remains a distinct silo, so there are application LDAP accounts with no clear line of ownership. This script is jammed into the /etc/skel profile to help find active sudo calls to application accounts. Also available in [Go](https://github.com/lbonanomi/go/blob/master/suwho.go). The mechanics of determining sudo-ed users is also discussed as part of a [dev.to article](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga).  
+Workflow Post Functions:  
+  * [Deduplicate and notify users in the *Watchers* and *Authorized Watchers* fields](https://gist.github.com/lbonanomi/42cf45ed3577534df5138944c8aeb37c)
 
 
-### Visualization Things
-
-[braille_chart.sh](braille_chart.sh): I <3 the idea of welding  [sparklines](https://github.com/holman/spark) and [Grafana's](https://grafana.com) handsome line charts together in terminal. To try and keep things compact while still-showing discrete counts, values are displayed in 8-dot braille. *Please note:* this script is fun at the expense of both efficiency and sanity. 
-
-![screencap](screenshots/braille_chart.png)
-
-#### NOTE: 
-If you need a *good* example of visualization in-shell, my hero [katef](https://github.com/katef/) schooled Twitter with [this](https://gist.github.com/katef/fb4cb6d47decd8052bd0e8d88c03a102)
+## Linux-Env Tools
+* [Group text files by cosine-similarity](https://gist.github.com/lbonanomi/9e267b1f39ec454c81904decce46c534) also [ported to Go](https://github.com/lbonanomi/go/blob/master/grouper.go)  
+* [Measure similarity of text files by cosine-similarity](https://gist.github.com/lbonanomi/f1bd956acc9a9e21d9b9dc713a9e81a9)  
+* [Measure similarity of text files by Jaccard index](https://gist.github.com/lbonanomi/788fdc55d8133b5463788c6e67e9fc0a)  
+* [Aggregate files by similarity of filename (PHP)](https://gist.github.com/lbonanomi/bea8297751ff39f9b0a51352011c6385)  
+* [Aggregate files by similarity of filename (Python)](https://gist.github.com/lbonanomi/0954cedc4cd7bedac7ddb5ebd9b0275f)
 
 
+## Slack Tools
+* [Roll-up a Slack thread as a Jira Service Management issue](https://gist.github.com/lbonanomi/8f9986ff6186cbac7be83d7a0fe6e0bf)
+
+
+<br>
+<p align="center">𝚃𝚑𝚒𝚜 𝚓𝚞𝚗𝚔 𝚍𝚛𝚊𝚠𝚎𝚛 𝚘𝚏 𝚊 𝚛𝚎𝚙𝚘 𝚑𝚊𝚜 𝚋𝚎𝚎𝚗 𝚛𝚎𝚙𝚕𝚊𝚌𝚎𝚍 𝚠𝚒𝚝𝚑 𝚊 𝚌𝚘𝚕𝚕𝚎𝚌𝚝𝚒𝚘𝚗 𝚘𝚏 𝚐𝚒𝚜𝚝𝚜</p>
