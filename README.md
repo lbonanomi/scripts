@@ -26,12 +26,17 @@
 Workflow Post Functions:  
   * [Deduplicate and notify users in the *Watchers* and *Authorized Watchers* fields](https://gist.github.com/lbonanomi/42cf45ed3577534df5138944c8aeb37c)
 
+
 ## Linux-Env Tools
 * [Group text files by cosine-similarity](https://gist.github.com/lbonanomi/9e267b1f39ec454c81904decce46c534) also [ported to Go](https://github.com/lbonanomi/go/blob/master/grouper.go)  
 * [Measure similarity of text files by cosine-similarity](https://gist.github.com/lbonanomi/f1bd956acc9a9e21d9b9dc713a9e81a9)  
 * [Measure similarity of text files by Jaccard index](https://gist.github.com/lbonanomi/788fdc55d8133b5463788c6e67e9fc0a)  
 * [Aggregate files by similarity of filename (PHP)](https://gist.github.com/lbonanomi/bea8297751ff39f9b0a51352011c6385)  
 * [Aggregate files by similarity of filename (Python)](https://gist.github.com/lbonanomi/0954cedc4cd7bedac7ddb5ebd9b0275f)
+
+
+## Slack Tools
+* [Roll-up a Slack thread as a Jira Service Management issue](https://gist.github.com/lbonanomi/8f9986ff6186cbac7be83d7a0fe6e0bf)
 
 
 <br>
