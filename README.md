@@ -14,10 +14,6 @@
 * [Who su-ed into this shell?](https://gist.github.com/lbonanomi/36a8bec8245b4eda61b7f332746d1059)  
 
 
-## Confluence Tools
-* [Slack shortcut: search message text in Confluence](https://gist.github.com/lbonanomi/a7a6dcff5b0e7f4a65c1658bac81f52f#file-wikit-py)
-
-
 ## Jira Tools 
 * [Disable a specific Jira plugin](https://gist.github.com/lbonanomi/23f1ab7784f960d86dc24ff445e5929c)  
 * [Publish project's *Due Date* values as an iCal feed](https://gist.github.com/lbonanomi/635ee4fe89e01e96865132d5844433cd)
@@ -36,7 +32,8 @@ Workflow Post Functions:
 
 
 ## Slack Tools
-* [Roll-up a Slack thread as a Jira Service Management issue](https://gist.github.com/lbonanomi/8f9986ff6186cbac7be83d7a0fe6e0bf)
+* [Slack shortcut: Collect a Slack thread as a Jira Service Management issue](https://gist.github.com/lbonanomi/8f9986ff6186cbac7be83d7a0fe6e0bf)
+* [Slack shortcut: Search a Slack message's text in Confluence](https://gist.github.com/lbonanomi/a7a6dcff5b0e7f4a65c1658bac81f52f)
 
 
 <br>
