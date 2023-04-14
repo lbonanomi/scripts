@@ -7,10 +7,10 @@
 
 
 ## .bashrc Functions
-* [Block piping curl output into bash](https://gist.github.com/lbonanomi/5a987b5f0987f3b1863245d54ae00848)  &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/lecturing-about-curl-bash-pipelines-1ip1)
-* [Record terminal session as a Gist](https://gist.github.com/lbonanomi/32e08b636c4cb797e6926a305b083a0e) &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga)
+* [Block piping curl output into bash](https://gist.github.com/lbonanomi/5a987b5f0987f3b1863245d54ae00848)  &#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/lecturing-about-curl-bash-pipelines-1ip1)
+* [Record terminal session as a Gist](https://gist.github.com/lbonanomi/32e08b636c4cb797e6926a305b083a0e)&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/dear-diary-recording-bash-session-as-github-gists-1nga)
 * [Was SSH user authorized by key or password?](https://gist.github.com/lbonanomi/4bcfd763b0e30de520423e626cb6aac8)  &#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/ssh-shibboleths-3p5b)
-* [What was I doing in this BASH session?](https://gist.github.com/lbonanomi/ab13df664ef2054a2e34eeb933d6675d)  &#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/what-was-i-doing-in-this-shell-4i9b)
+* [What was I doing in this BASH session?](https://gist.github.com/lbonanomi/ab13df664ef2054a2e34eeb933d6675d)&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;&#8192;[𝚍𝚎𝚟.𝚝𝚘 𝚊𝚛𝚝𝚒𝚌𝚕𝚎](https://dev.to/lbonanomi/what-was-i-doing-in-this-shell-4i9b)
 * [Who su-ed into this shell?](https://gist.github.com/lbonanomi/36a8bec8245b4eda61b7f332746d1059)  
 
 
